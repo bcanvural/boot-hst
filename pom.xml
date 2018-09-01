@@ -23,11 +23,56 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <java.version>1.8</java.version>
     <hst.version>5.4.0</hst.version>
+    <hst.spring.version>4.3.15.RELEASE</hst.spring.version>
     <spring.boot.version>1.5.15.RELEASE</spring.boot.version>
     <hippo.enterprise-repository.version>5.4.0</hippo.enterprise-repository.version>
   </properties>
 
   <dependencies>
+
+    <dependency>
+      <groupId>net.sf.ehcache</groupId>
+      <artifactId>ehcache-web</artifactId>
+      <version>2.0.4</version>
+      <exclusions>
+        <exclusion>
+          <groupId>net.sf.ehcache</groupId>
+          <artifactId>ehcache-core</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+
+    <dependency>
+      <groupId>org.freemarker</groupId>
+      <artifactId>freemarker</artifactId>
+      <version>2.3.24-incubating</version>
+    </dependency>
+    <dependency>
+      <groupId>org.onehippo.cms7.hst</groupId>
+      <artifactId>hst-client</artifactId>
+      <version>${hst.version}</version>
+    </dependency>
+    <dependency>
+      <artifactId>ehcache</artifactId>
+      <groupId>net.sf.ehcache</groupId>
+      <version>2.10.4</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context-support</artifactId>
+      <version>${hst.spring.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjweaver</artifactId>
+      <version>1.8.9</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-jexl</groupId>
+      <artifactId>commons-jexl</artifactId>
+      <version>1.1</version>
+    </dependency>
     <dependency>
       <groupId>commons-configuration</groupId>
       <artifactId>commons-configuration</artifactId>
@@ -129,21 +174,12 @@
         </exclusion>
       </exclusions>
     </dependency>
-    <!--<dependency>-->
-      <!--<groupId>org.springframework</groupId>-->
-      <!--<artifactId>spring-context-support</artifactId>-->
-      <!--<version>4.3.15.RELEASE</version>-->
-    <!--</dependency>-->
-    <!--<dependency>-->
-      <!--<groupId>net.sf.ehcache</groupId>-->
-      <!--<artifactId>ehcache</artifactId>-->
-      <!--<version>2.10.4</version>-->
-    <!--</dependency>-->
 
-    <!--<dependency>-->
-      <!--<groupId>org.aspectj</groupId>-->
-      <!--<artifactId>aspectjweaver</artifactId>-->
-    <!--</dependency>-->
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-proxy</artifactId>
+      <version>1.0</version>
+    </dependency>
 
     <dependency>
       <groupId>org.springframework.boot</groupId>
