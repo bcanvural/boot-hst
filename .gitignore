@@ -4,3 +4,4 @@ target
 essentials/overlays
 .idea
 *.DS_Store
+storage/*
