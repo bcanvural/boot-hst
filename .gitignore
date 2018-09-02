@@ -5,3 +5,4 @@ essentials/overlays
 .idea
 *.DS_Store
 storage/*
+export.zip

@@ -20,7 +20,6 @@ import org.springframework.web.filter.CharacterEncodingFilter;
 
 @Configuration
 public class ServletContextInitializerImpl implements ServletContextInitializer {
-
     @Override
     public void onStartup(ServletContext servletContext) throws ServletException {
         System.err.println("------------------------------------");
@@ -78,7 +77,6 @@ public class ServletContextInitializerImpl implements ServletContextInitializer 
         hstResourceServlet.setInitParameter("jarPathPrefix", "/META-INF/web-resources");
         hstResourceServlet.addMapping("/resources/*");
 
-
         ServletRegistration.Dynamic pingServlet = servletContext.addServlet("PingServlet", HstPingServlet.class);
         pingServlet.addMapping("/ping/*");
 
@@ -86,5 +84,4 @@ public class ServletContextInitializerImpl implements ServletContextInitializer 
         bootRepositoryServlet.setLoadOnStartup(1);
 
     }
-
 }

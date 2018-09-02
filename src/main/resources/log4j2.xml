@@ -16,6 +16,7 @@
     <Logger name="org.onehippo.cms7.crisp.repository.CrispRegistryModule" level="fatal"/>
     <Logger name="org.onehippo.repository.lock.db.DbLockManager" level="off"/>
     <Logger name="HstDelegateeFilterBean" level="debug"/>
+    <Logger name="org.onehippo.repository.lock.db.LockThreadInterrupter" level="fatal"/>
     <Root level="warn">
       <AppenderRef ref="console"/>
     </Root>
