@@ -81,7 +81,10 @@ public class ServletContextInitializerImpl implements ServletContextInitializer 
 
         ServletRegistration.Dynamic pingServlet = servletContext.addServlet("PingServlet", HstPingServlet.class);
         pingServlet.addMapping("/ping/*");
-        
+
+        ServletRegistration.Dynamic bootRepositoryServlet = servletContext.addServlet("BootRepository", BootRepositoryServlet.class);
+        bootRepositoryServlet.setLoadOnStartup(1);
+
     }
 
 }

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+  Copyright 2017 Hippo B.V. (http://www.onehippo.com)
+-->
+<Configuration>
+  <Appenders>
+    <Console name="console" target="SYSTEM_OUT">
+      <PatternLayout pattern="%d{dd.MM.yyyy HH:mm:ss} %-5p [%C.%M():%L] %m%n"/>
+    </Console>
+  </Appenders>
+  <Loggers>
+    <Logger name="com.onehippo.repository.HippoEnterpriseRepository" level="info"/>
+    <!--Setting log level to fatal to silence error when running tests with IntelliJ-->
+    <!--Consequence of https://youtrack.jetbrains.com/issue/IDEA-122783-->
+    <Logger name="org.onehippo.cm.engine.ConfigurationServiceImpl" level="fatal"/>
+    <Logger name="org.onehippo.cms7.crisp.repository.CrispRegistryModule" level="fatal"/>
+    <Logger name="org.onehippo.repository.lock.db.DbLockManager" level="off"/>
+    <Logger name="HstDelegateeFilterBean" level="debug"/>
+    <Root level="warn">
+      <AppenderRef ref="console"/>
+    </Root>
+  </Loggers>
+</Configuration>

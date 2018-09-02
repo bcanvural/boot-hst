@@ -29,6 +29,33 @@
   </properties>
 
   <dependencies>
+    <dependency>
+      <groupId>org.onehippo.cms7</groupId>
+      <artifactId>hippo-essentials-components-hst</artifactId>
+      <version>4.4.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.onehippo.cms7</groupId>
+      <artifactId>hippo-repository-connector</artifactId>
+      <version>${hippo.enterprise-repository.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.onehippo.cms7</groupId>
+      <artifactId>hippo-services-eventbus</artifactId>
+      <version>4.4.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.onehippo.cms7</groupId>
+      <artifactId>hippo-repository-servlets</artifactId>
+      <version>5.4.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.onehippo.cms7.hst.components</groupId>
+      <artifactId>hst-restapi</artifactId>
+      <version>${hst.version}</version>
+    </dependency>
 
     <dependency>
       <groupId>net.sf.ehcache</groupId>
@@ -228,6 +255,9 @@
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
+        <configuration>
+          <jvmArguments>-Dorg.apache.jackrabbit.core.cluster.node_id=boot_hst -Drepo.path=storage -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8000</jvmArguments>
+        </configuration>
       </plugin>
     </plugins>
   </build>
