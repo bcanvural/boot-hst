@@ -30,7 +30,7 @@ public class ServletContextInitializerImpl implements ServletContextInitializer 
                         "      ,classpath*:com/onehippo/**/*.class\n" +
                         "      ,classpath*:org/onehippo/forge/**/*.class");
 
-        //Servlet Registrations START
+        //Filter Registrations START
 
         FilterRegistration.Dynamic filterRegistration;
         //CharacterEncodingFilter
@@ -45,7 +45,7 @@ public class ServletContextInitializerImpl implements ServletContextInitializer 
         filterRegistration = servletContext.addFilter("HstFilter", HstFilter.class);
         filterRegistration.addMappingForUrlPatterns(null, false, "/*");
 
-        //Servlet Registrations END
+        //Filter Registrations END
 
         //Listener Registrations
         servletContext.addListener(new HstContextLoaderListener());
