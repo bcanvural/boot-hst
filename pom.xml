@@ -26,13 +26,31 @@
     <hst.spring.version>4.3.15.RELEASE</hst.spring.version>
     <spring.boot.version>1.5.15.RELEASE</spring.boot.version>
     <hippo.enterprise-repository.version>5.4.0</hippo.enterprise-repository.version>
+    <commons.proxy.version>1.0</commons.proxy.version>
+    <hippo.cms.commons.version>4.4.0</hippo.cms.commons.version>
+    <jcr.version>2.0</jcr.version>
+    <geronimo.version>1.1.1</geronimo.version>
+    <hippo.services.webfiles.version>4.4.0</hippo.services.webfiles.version>
+    <jsp.api.version>2.2</jsp.api.version>
+    <taglibs.standard.version>1.2.5</taglibs.standard.version>
+    <xalan.version>2.7.2</xalan.version>
+    <hippo.essentials.components.version>4.4.0</hippo.essentials.components.version>
+    <hippo.services.eventbus.version>4.4.0</hippo.services.eventbus.version>
+    <hippo.repository.servlets.version>5.4.0</hippo.repository.servlets.version>
+    <ehcache.web.version>2.0.4</ehcache.web.version>
+    <freemarker.version>2.3.24-incubating</freemarker.version>
+    <ehcache.version>2.10.4</ehcache.version>
+    <aspectj.weaver.version>1.8.9</aspectj.weaver.version>
+    <commons.jexl.version>1.1</commons.jexl.version>
+    <commons.configuration.version>1.7</commons.configuration.version>
+    <mysql.connector.version>5.1.46</mysql.connector.version>
   </properties>
 
   <dependencies>
     <dependency>
       <groupId>org.onehippo.cms7</groupId>
       <artifactId>hippo-services-webfiles</artifactId>
-      <version>4.4.0</version>
+      <version>${hippo.services.webfiles.version}</version>
     </dependency>
     <dependency>
       <groupId>org.apache.tomcat.embed</groupId>
@@ -41,36 +59,36 @@
     <dependency>
       <groupId>javax.servlet.jsp</groupId>
       <artifactId>jsp-api</artifactId>
-      <version>2.2</version>
+      <version>${jsp.api.version}</version>
     </dependency>
 
     <dependency>
       <groupId>org.apache.taglibs</groupId>
       <artifactId>taglibs-standard-spec</artifactId>
-      <version>1.2.5</version>
+      <version>${taglibs.standard.version}</version>
     </dependency>
 
     <dependency>
       <groupId>org.apache.taglibs</groupId>
       <artifactId>taglibs-standard-impl</artifactId>
-      <version>1.2.5</version>
+      <version>${taglibs.standard.version}</version>
     </dependency>
 
     <!-- the following xalan dependencies are required by apache standard taglibs implementation -->
     <dependency>
       <groupId>xalan</groupId>
       <artifactId>xalan</artifactId>
-      <version>2.7.2</version>
+      <version>${xalan.version}</version>
     </dependency>
     <dependency>
       <groupId>xalan</groupId>
       <artifactId>serializer</artifactId>
-      <version>2.7.2</version>
+      <version>${xalan.version}</version>
     </dependency>
     <dependency>
       <groupId>org.onehippo.cms7</groupId>
       <artifactId>hippo-essentials-components-hst</artifactId>
-      <version>4.4.0</version>
+      <version>${hippo.essentials.components.version}</version>
     </dependency>
     <dependency>
       <groupId>org.onehippo.cms7</groupId>
@@ -80,13 +98,13 @@
     <dependency>
       <groupId>org.onehippo.cms7</groupId>
       <artifactId>hippo-services-eventbus</artifactId>
-      <version>4.4.0</version>
+      <version>${hippo.services.eventbus.version}</version>
     </dependency>
 
     <dependency>
       <groupId>org.onehippo.cms7</groupId>
       <artifactId>hippo-repository-servlets</artifactId>
-      <version>5.4.0</version>
+      <version>${hippo.repository.servlets.version}</version>
     </dependency>
 
     <dependency>
@@ -98,7 +116,7 @@
     <dependency>
       <groupId>net.sf.ehcache</groupId>
       <artifactId>ehcache-web</artifactId>
-      <version>2.0.4</version>
+      <version>${ehcache.web.version}</version>
       <exclusions>
         <exclusion>
           <groupId>net.sf.ehcache</groupId>
@@ -110,7 +128,7 @@
     <dependency>
       <groupId>org.freemarker</groupId>
       <artifactId>freemarker</artifactId>
-      <version>2.3.24-incubating</version>
+      <version>${freemarker.version}</version>
     </dependency>
     <dependency>
       <groupId>org.onehippo.cms7.hst</groupId>
@@ -120,7 +138,7 @@
     <dependency>
       <artifactId>ehcache</artifactId>
       <groupId>net.sf.ehcache</groupId>
-      <version>2.10.4</version>
+      <version>${ehcache.version}</version>
     </dependency>
 
     <dependency>
@@ -131,17 +149,17 @@
     <dependency>
       <groupId>org.aspectj</groupId>
       <artifactId>aspectjweaver</artifactId>
-      <version>1.8.9</version>
+      <version>${aspectj.weaver.version}</version>
     </dependency>
     <dependency>
       <groupId>commons-jexl</groupId>
       <artifactId>commons-jexl</artifactId>
-      <version>1.1</version>
+      <version>${commons.jexl.version}</version>
     </dependency>
     <dependency>
       <groupId>commons-configuration</groupId>
       <artifactId>commons-configuration</artifactId>
-      <version>1.7</version>
+      <version>${commons.configuration.version}</version>
     </dependency>
     <dependency>
       <groupId>org.onehippo.cms7.hst.dependencies</groupId>
@@ -181,7 +199,7 @@
     <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
-      <version>5.1.46</version>
+      <version>${mysql.connector.version}</version>
     </dependency>
 
 
@@ -194,13 +212,13 @@
     <dependency>
       <groupId>org.apache.geronimo.specs</groupId>
       <artifactId>geronimo-jta_1.1_spec</artifactId>
-      <version>1.1.1</version>
+      <version>${geronimo.version}</version>
     </dependency>
 
     <dependency>
       <groupId>javax.jcr</groupId>
       <artifactId>jcr</artifactId>
-      <version>2.0</version>
+      <version>${jcr.version}</version>
     </dependency>
     <dependency>
       <groupId>com.onehippo.cms7</groupId>
@@ -221,7 +239,7 @@
     <dependency>
       <groupId>org.onehippo.cms7</groupId>
       <artifactId>hippo-cms7-commons</artifactId>
-      <version>4.4.0</version>
+      <version>${hippo.cms.commons.version}</version>
     </dependency>
     <dependency>
       <groupId>org.onehippo.cms7.hst.components</groupId>
@@ -243,7 +261,7 @@
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-proxy</artifactId>
-      <version>1.0</version>
+      <version>${commons.proxy.version}</version>
     </dependency>
 
     <dependency>
